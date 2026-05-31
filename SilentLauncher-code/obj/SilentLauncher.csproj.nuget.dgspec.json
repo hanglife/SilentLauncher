@@ -1,0 +1,81 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\VENDRICK\\Documents\\Codex\\2026-05-31\\files-mentioned-by-the-user-openjellfyin\\SilentLauncher\\SilentLauncher.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\VENDRICK\\Documents\\Codex\\2026-05-31\\files-mentioned-by-the-user-openjellfyin\\SilentLauncher\\SilentLauncher.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\VENDRICK\\Documents\\Codex\\2026-05-31\\files-mentioned-by-the-user-openjellfyin\\SilentLauncher\\SilentLauncher.csproj",
+        "projectName": "SilentLauncher",
+        "projectPath": "C:\\Users\\VENDRICK\\Documents\\Codex\\2026-05-31\\files-mentioned-by-the-user-openjellfyin\\SilentLauncher\\SilentLauncher.csproj",
+        "packagesPath": "C:\\Users\\VENDRICK\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\VENDRICK\\Documents\\Codex\\2026-05-31\\files-mentioned-by-the-user-openjellfyin\\SilentLauncher\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\VENDRICK\\Documents\\Codex\\2026-05-31\\files-mentioned-by-the-user-openjellfyin\\SilentLauncher\\NuGet.Config",
+          "C:\\Users\\VENDRICK\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0-windows"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0-windows7.0": {
+            "targetAlias": "net9.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0-windows7.0": {
+          "targetAlias": "net9.0-windows",
+          "dependencies": {
+            "Microsoft.NET.ILLink.Tasks": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "win-x64": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "startupDelaySeconds": 20,
+  "logFile": "SilentLauncher.log",
+  "apps": [
+    {
+      "name": "Kavita",
+      "path": "D:\\Program Files\\Kavita\\Kavita.exe",
+      "workingDirectory": "D:\\Program Files\\Kavita",
+      "arguments": "",
+      "delaySeconds": 0,
+      "hideWindow": true,
+      "minimizeWindow": false,
+      "preventDuplicate": true,
+      "waitForWindowMs": 8000,
+      "enabled": true,
+      "useShellExecute": false
+    },
+    {
+      "name": "Sideloadly",
+      "path": "D:\\Program Files\\Sideloadly\\sideloadly.exe",
+      "workingDirectory": "D:\\Program Files\\Sideloadly",
+      "arguments": "",
+      "delaySeconds": 10,
+      "hideWindow": false,
+      "minimizeWindow": true,
+      "preventDuplicate": true,
+      "waitForWindowMs": 12000,
+      "enabled": true,
+      "useShellExecute": false
+    }
+  ]
+}

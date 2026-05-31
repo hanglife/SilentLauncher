@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <!-- 输出类型：WinExe 表示 Windows 图形程序。这样 SilentLauncher.exe 启动时不会弹出控制台黑窗口。 -->
+    <OutputType>WinExe</OutputType>
+    <!-- 目标框架：net9.0-windows 表示只面向 Windows。这个工具调用了 Windows 窗口 API，所以不做跨平台。 -->
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <!-- 不使用 WinForms 组件。程序只调用少量 Win32 API，不需要额外 UI 框架。 -->
+    <UseWindowsForms>false</UseWindowsForms>
+    <!-- 开启可空引用检查。影响：编译时更容易发现路径、配置等可能为空的问题。 -->
+    <Nullable>enable</Nullable>
+    <!-- 开启隐式 using。影响：代码更简洁，不影响运行行为。 -->
+    <ImplicitUsings>enable</ImplicitUsings>
+    <!-- 生成的程序集名称。影响最终输出的主程序名 SilentLauncher.exe。 -->
+    <AssemblyName>SilentLauncher</AssemblyName>
+    <!-- 默认命名空间。只影响源码组织，不影响用户配置。 -->
+    <RootNamespace>SilentLauncher</RootNamespace>
+    <!-- 程序版本号。发布新版本时可以递增，方便以后排查。 -->
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- 发布时复制示例配置。用户可以复制成 launcher.json 后按中文注释修改。 -->
+    <None Update="launcher.example.json" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <!-- 发布时复制中文说明文档。 -->
+    <None Update="README.md" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

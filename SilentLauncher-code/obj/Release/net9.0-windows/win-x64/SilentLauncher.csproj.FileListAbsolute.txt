@@ -1,0 +1,16 @@
+C:\Users\VENDRICK\Documents\Codex\2026-05-31\files-mentioned-by-the-user-openjellfyin\SilentLauncher\bin\Release\net9.0-windows\win-x64\SilentLauncher.exe
+C:\Users\VENDRICK\Documents\Codex\2026-05-31\files-mentioned-by-the-user-openjellfyin\SilentLauncher\bin\Release\net9.0-windows\win-x64\SilentLauncher.deps.json
+C:\Users\VENDRICK\Documents\Codex\2026-05-31\files-mentioned-by-the-user-openjellfyin\SilentLauncher\bin\Release\net9.0-windows\win-x64\SilentLauncher.runtimeconfig.json
+C:\Users\VENDRICK\Documents\Codex\2026-05-31\files-mentioned-by-the-user-openjellfyin\SilentLauncher\bin\Release\net9.0-windows\win-x64\SilentLauncher.dll
+C:\Users\VENDRICK\Documents\Codex\2026-05-31\files-mentioned-by-the-user-openjellfyin\SilentLauncher\bin\Release\net9.0-windows\win-x64\SilentLauncher.pdb
+C:\Users\VENDRICK\Documents\Codex\2026-05-31\files-mentioned-by-the-user-openjellfyin\SilentLauncher\obj\Release\net9.0-windows\win-x64\SilentLauncher.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\VENDRICK\Documents\Codex\2026-05-31\files-mentioned-by-the-user-openjellfyin\SilentLauncher\obj\Release\net9.0-windows\win-x64\SilentLauncher.AssemblyInfoInputs.cache
+C:\Users\VENDRICK\Documents\Codex\2026-05-31\files-mentioned-by-the-user-openjellfyin\SilentLauncher\obj\Release\net9.0-windows\win-x64\SilentLauncher.AssemblyInfo.cs
+C:\Users\VENDRICK\Documents\Codex\2026-05-31\files-mentioned-by-the-user-openjellfyin\SilentLauncher\obj\Release\net9.0-windows\win-x64\SilentLauncher.csproj.CoreCompileInputs.cache
+C:\Users\VENDRICK\Documents\Codex\2026-05-31\files-mentioned-by-the-user-openjellfyin\SilentLauncher\obj\Release\net9.0-windows\win-x64\SilentLauncher.dll
+C:\Users\VENDRICK\Documents\Codex\2026-05-31\files-mentioned-by-the-user-openjellfyin\SilentLauncher\obj\Release\net9.0-windows\win-x64\refint\SilentLauncher.dll
+C:\Users\VENDRICK\Documents\Codex\2026-05-31\files-mentioned-by-the-user-openjellfyin\SilentLauncher\obj\Release\net9.0-windows\win-x64\SilentLauncher.pdb
+C:\Users\VENDRICK\Documents\Codex\2026-05-31\files-mentioned-by-the-user-openjellfyin\SilentLauncher\obj\Release\net9.0-windows\win-x64\SilentLauncher.genruntimeconfig.cache
+C:\Users\VENDRICK\Documents\Codex\2026-05-31\files-mentioned-by-the-user-openjellfyin\SilentLauncher\obj\Release\net9.0-windows\win-x64\ref\SilentLauncher.dll
+C:\Users\VENDRICK\Documents\Codex\2026-05-31\files-mentioned-by-the-user-openjellfyin\SilentLauncher\bin\Release\net9.0-windows\win-x64\launcher.example.json
+C:\Users\VENDRICK\Documents\Codex\2026-05-31\files-mentioned-by-the-user-openjellfyin\SilentLauncher\bin\Release\net9.0-windows\win-x64\README.md

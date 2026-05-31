@@ -1,0 +1,4 @@
+C:\Users\VENDRICK\Documents\Codex\2026-05-31\files-mentioned-by-the-user-openjellfyin\SilentLauncher\bin\Release\net9.0-windows\win-x64\publish\SilentLauncher.pdb
+C:\Users\VENDRICK\Documents\Codex\2026-05-31\files-mentioned-by-the-user-openjellfyin\SilentLauncher\bin\Release\net9.0-windows\win-x64\publish\launcher.example.json
+C:\Users\VENDRICK\Documents\Codex\2026-05-31\files-mentioned-by-the-user-openjellfyin\SilentLauncher\bin\Release\net9.0-windows\win-x64\publish\README.md
+C:\Users\VENDRICK\Documents\Codex\2026-05-31\files-mentioned-by-the-user-openjellfyin\SilentLauncher\bin\Release\net9.0-windows\win-x64\publish\SilentLauncher.exe

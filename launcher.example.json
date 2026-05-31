@@ -1,0 +1,132 @@
+{
+  // 全局启动延迟，单位：秒。
+  // 可选值：0 或任意正整数。
+  // 作用：让 SilentLauncher 在启动后先等待一段时间，再开始启动下面 apps 里的软件。
+  // 能解决的问题：Windows 刚登录时，网络、磁盘、USB、显卡托盘、杀毒软件等还没完全准备好，
+  // 这时马上启动 Kavita、Sideloadly、网盘、同步工具，容易失败或卡住。
+  // 影响：数值越大，软件越晚启动；设为 0 表示不等待。
+  "startupDelaySeconds": 20,
+
+  // 日志文件路径。
+  // 可选值：
+  // 1. 相对路径，例如 "SilentLauncher.log"，表示日志写到 SilentLauncher.exe 所在目录。
+  // 2. 绝对路径，例如 "D:\\Launchers\\logs\\SilentLauncher.log"。
+  // 3. 空字符串 "" 或删除此项，表示不写日志。
+  // 作用：记录每个软件是否启动、PID 是多少、是否因为已运行而跳过、是否报错。
+  // 能解决的问题：计划任务/隐藏启动失败时，窗口不会弹出来；日志可以帮你判断到底是路径错了、
+  // 工作目录错了、权限不足，还是软件自己启动失败。
+  // 影响：开启日志会生成文本文件；长期使用时日志会增长，可以偶尔删除。
+  "logFile": "SilentLauncher.log",
+
+  // apps 是要启动的软件列表。
+  // 可放一个或多个软件；SilentLauncher 会按数组顺序依次处理。
+  // 影响：前面的软件会先启动；如果某个软件设置了 delaySeconds，后面的软件也会等它延迟完成后再继续。
+  "apps": [
+    {
+      // 名称，只用于日志显示。
+      // 可选值：任意中文/英文文本，也可以删除。
+      // 作用：让日志里显示友好的名字，例如 [Kavita] started。
+      // 影响：不影响启动行为；删除后日志会用 path 代替名称。
+      "name": "Kavita",
+
+      // 程序路径，必填。
+      // 可选值：
+      // 1. 绝对路径，例如 "D:\\Apps\\Kavita\\Kavita.exe"。
+      // 2. 相对路径，例如 ".\\Kavita.exe"，相对于 launcher.json 所在目录。
+      // 3. 支持环境变量，例如 "%LOCALAPPDATA%\\Programs\\SomeApp\\app.exe"。
+      // 作用：告诉 SilentLauncher 要启动哪个 exe。
+      // 能解决的问题：避免 shell:startup 里快捷方式工作目录混乱、路径带空格导致启动失败。
+      // 影响：路径写错会启动失败，并写入日志。
+      "path": "D:\\Program Files\\Kavita\\Kavita.exe",
+
+      // 工作目录。
+      // 可选值：
+      // 1. 绝对路径，例如 "D:\\Apps\\Kavita"。
+      // 2. 相对路径，例如 "."。
+      // 3. 删除此项或设为 null，表示自动使用 exe 所在目录。
+      // 作用：相当于在这个目录里双击 exe。
+      // 能解决的问题：很多软件依赖当前目录读取 config、data、plugins、runtime 文件；
+      // 如果工作目录不对，软件可能能启动但配置丢失，也可能直接闪退。
+      // 影响：建议服务端程序和绿色软件都明确填写。
+      "workingDirectory": "D:\\Apps\\Kavita",
+
+      // 启动参数。
+      // 可选值：任意命令行参数字符串；没有参数时填 "" 或删除此项。
+      // 作用：传给目标 exe，例如 "--port 5000"、"--config D:\\config"。
+      // 能解决的问题：某些程序需要指定端口、配置目录、无界面模式等。
+      // 影响：参数写错可能导致软件启动失败；具体支持哪些参数取决于目标软件。
+      "arguments": "",
+
+      // 当前软件自己的启动延迟，单位：秒。
+      // 可选值：0 或任意正整数。
+      // 作用：在启动这个软件前额外等待。
+      // 能解决的问题：例如先等 Jellyfin/Kavita 起来，再启动依赖它的同步工具；
+      // 或者登录后先等 USB/iTunes 相关服务准备好，再启动 Sideloadly。
+      // 影响：只影响当前软件以及排在它后面的软件。
+      "delaySeconds": 0,
+
+      // 是否隐藏目标软件窗口。
+      // 可选值：true / false。
+      // true：启动后尝试隐藏主窗口，适合 Kavita、Jellyfin、常驻后台工具。
+      // false：不隐藏，正常显示窗口。
+      // 能解决的问题：避免登录时一堆窗口弹到前台、占任务栏、打断使用。
+      // 影响：GUI 软件如果启动后需要你确认、登录、选择设备，隐藏后你可能看不到它卡在哪里；
+      // 这类软件建议先 false 测试稳定后再改 true。
+      "hideWindow": true,
+
+      // 是否最小化目标软件窗口。
+      // 可选值：true / false。
+      // 作用：启动后尝试最小化到任务栏，而不是完全隐藏。
+      // 和 hideWindow 的关系：如果 hideWindow=true，优先隐藏；minimizeWindow 通常不会生效。
+      // 能解决的问题：你希望软件别挡屏幕，但还想在任务栏看到它。
+      // 影响：最小化后仍可能有任务栏图标。
+      "minimizeWindow": false,
+
+      // 是否防止重复启动。
+      // 可选值：true / false。
+      // true：如果同一路径的 exe 已经在运行，则跳过，不再启动第二个。
+      // false：每次运行 SilentLauncher 都尝试再启动一个新进程。
+      // 能解决的问题：防止计划任务重复触发、手动双击多次导致开出多个服务端进程。
+      // 影响：少数软件本来就允许多开；如果你确实需要多开，改为 false。
+      "preventDuplicate": true,
+
+      // 等待目标软件主窗口出现的最长时间，单位：毫秒。
+      // 可选值：0 或任意正整数。
+      // 作用：有些 GUI 软件启动后几秒才创建窗口，SilentLauncher 会在这段时间内等待并尝试隐藏/最小化。
+      // 能解决的问题：如果窗口出现太慢，刚启动时隐藏不到，之后窗口又弹出来；
+      // 增大这个值可以提高隐藏成功率。
+      // 影响：数值越大，SilentLauncher 自己退出越晚；对目标软件运行没有负面影响。
+      "waitForWindowMs": 8000,
+
+      // 是否启用这一项。
+      // 可选值：true / false。
+      // true：正常处理这个软件。
+      // false：临时跳过这个软件，但保留配置。
+      // 能解决的问题：排查启动问题时，不需要删除整段配置，只要改成 false。
+      // 影响：false 时不会启动这个软件。
+      "enabled": true,
+
+      // 是否使用 Windows Shell 启动。
+      // 可选值：true / false。
+      // false：默认值，直接 CreateProcess，隐藏窗口和防重复更可控。
+      // true：通过 ShellExecute 启动，行为更像双击文件，某些需要文件关联/UAC/特殊 shell 行为的软件可能需要它。
+      // 能解决的问题：少数软件直接启动失败，但双击能启动时，可以尝试 true。
+      // 影响：true 时 CreateNoWindow 控制力会弱一些，隐藏窗口不一定总是如 false 稳定。
+      "useShellExecute": false
+    },
+
+    {
+      "name": "Sideloadly",
+      "path": "C:\\Program Files\\Sideloadly\\Sideloadly.exe",
+      "workingDirectory": "C:\\Program Files\\Sideloadly",
+      "arguments": "",
+      "delaySeconds": 10,
+      "hideWindow": true,
+      "minimizeWindow": false,
+      "preventDuplicate": true,
+      "waitForWindowMs": 12000,
+      "enabled": true,
+      "useShellExecute": false
+    }
+  ]
+}
