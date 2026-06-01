@@ -18,8 +18,10 @@
     <Version>1.0.0</Version>
   </PropertyGroup>
   <ItemGroup>
-    <!-- 发布时复制示例配置。用户可以复制成 launcher.json 后按中文注释修改。 -->
+    <!-- 发布时复制英文注释示例配置。用户可以复制成 launcher.json 后修改。 -->
     <None Update="launcher.example.json" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <!-- 发布时复制简体中文注释示例配置。 -->
+    <None Update="launcher.example.zh-CN.json" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
     <!-- 发布时复制中文说明文档。 -->
     <None Update="README.md" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
   </ItemGroup>

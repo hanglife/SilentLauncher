@@ -40,14 +40,21 @@ It is useful for these scenarios:
 │
 ├─ SilentLauncher.pdb            ← Can be deleted
 │
-├─ launcher.example.json         ← Main configuration file example
-├─ launcher.json                 ← Main configuration file; remove comments after configuration
+├─ launcher.example.json         ← Main configuration example with English comments
+├─ launcher.example.zh-CN.json   ← Main configuration example with Simplified Chinese comments
+├─ launcher.json                 ← Main configuration file copied from one of the examples
 ```
+
+## Configuration Comments
+
+The example configuration files intentionally use JSONC-style `//` comments. Strict JSON validators may mark them as invalid because standard JSON does not allow comments, but SilentLauncher reads `launcher.json` with comment skipping and trailing-comma support.
+
+The comments are only documentation. You can delete all `//` comment lines after editing the configuration, and SilentLauncher will work the same way.
 
 ## Quick Start
 
 1. Download the repository.
-2. Configure [launcher.example.json](launcher.example.json), then rename it to `launcher.json`.
+2. Configure [launcher.example.json](launcher.example.json), or use [launcher.example.zh-CN.json](launcher.example.zh-CN.json) if you prefer Simplified Chinese comments, then rename the chosen file to `launcher.json`.
 
    Most settings do not need to be changed. Usually you only need to edit the `apps` section and add the applications you want to start.
 

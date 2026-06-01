@@ -36,14 +36,21 @@
 │
 ├─ SilentLauncher.pdb            ← 可删除
 │
-├─ launcher.example.json         ← 主要配置文件示例
-├─ launcher.json                 ← 主要配置文件 配置完需要删除注释
+├─ launcher.example.json         ← 英文注释的主要配置文件示例
+├─ launcher.example.zh-CN.json   ← 简体中文注释的主要配置文件示例
+├─ launcher.json                 ← 从其中一个示例复制并改名后的主要配置文件
 ```
+
+## 配置注释说明
+
+示例配置文件故意使用 JSONC 风格的 `//` 注释。严格的 JSON 校验器可能会报错，因为标准 JSON 不允许注释；但 SilentLauncher 读取 `launcher.json` 时会跳过注释，并且支持尾逗号。
+
+这些注释只是说明。配置完成后，可以删除所有 `//` 注释行，不会影响 SilentLauncher 的运行功能。
 
 ## Quick Start 快速开始
 
 1. 下载库
-2. 配置 [launcher.example.json](https://github.com/hanglife/SilentLauncher/blob/main/launcher.example.json) 配置完后修改文件名为 `launcher.json`
+2. 配置 [launcher.example.json](launcher.example.json)，或者使用 [launcher.example.zh-CN.json](launcher.example.zh-CN.json) 查看简体中文注释，配置完后把选中的文件改名为 `launcher.json`
 
    大部分不用修改，只要修改添加 `apps` 内配置你要启动的 app。
 
