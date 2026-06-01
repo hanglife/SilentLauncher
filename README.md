@@ -47,7 +47,7 @@ It is useful for these scenarios:
 ## Quick Start
 
 1. Download the repository.
-2. Configure [launcher.example.json](https://github.com/hanglife/SilentLauncher/blob/main/launcher.example.json), then rename it to `launcher.json`.
+2. Configure [launcher.example.json](launcher.example.json), then rename it to `launcher.json`.
 
    Most settings do not need to be changed. Usually you only need to edit the `apps` section and add the applications you want to start.
 
